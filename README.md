@@ -32,6 +32,6 @@ Estimate of time needed to complete: 3 hours with do review
 
 Start time: 7:30
 
-Finish time: _____
+Finish time: 12
 
-Actual time needed to complete: _____
+Actual time needed to complete: 4 hours
