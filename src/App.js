@@ -8,6 +8,8 @@ class App extends React.Component{
     searchUrl : '',
     nameLocation:'',
     showResult : false ,
+    errorMessage:false ,
+
    }
  }
 
@@ -15,25 +17,34 @@ class App extends React.Component{
     ev.preventDefault();
     let urlForSearch= `https://eu1.locationiq.com/v1/search.php?key=pk.091d59a25243d149bb748755251ac17c&q=${this.state.searchUrl}&format=json`;
     
+   try {
 
-    let result = await axios.get(urlForSearch);
-    // console.log(result.data[0]);
-
-    this.setState({
-      nameLocation : result.data[0],
-      showResult : true,
-    })
+     let result = await axios.get(urlForSearch);
+     // console.log(result.data[0]);
+     
+     this.setState({
+       nameLocation : result.data[0],
+       showResult : true,
+       
+      })
+    } 
+    
+    catch {
+      this.setState({
+        showResult:false,
+        errorMessage:true
+      })
+    }
   }
-
   changeSearchUrl =(event)=>{
     this.setState({
       searchUrl: event.target.value,
-
+      
     })
     
     console.log(this.state.searchUrl);
   }
-  
+
   render(){
     return(
       <>
@@ -60,6 +71,9 @@ class App extends React.Component{
          &&
         <img src ={`https://maps.locationiq.com/v3/staticmap?key=pk.091d59a25243d149bb748755251ac17c&center=${this.state.nameLocation.lat},${this.state.nameLocation.lon}&zoom=1-18`}/>
       }
+          {this.state.errorMessage &&
+        <p>  "error": "Unable to geocode" </p>
+      } 
       </div>
       </>
     )
