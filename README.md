@@ -35,3 +35,16 @@ Start time: 7:30
 Finish time: 12
 
 Actual time needed to complete: 4 hours
+
+lab 07
+
+Name of feature: 
+frontend
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 5 pm
+
+Finish time: 9 pm
+
+Actual time needed to complete: 4 hours
