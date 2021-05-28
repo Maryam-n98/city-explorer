@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Weather from './comp/Weather'
 
 class App extends React.Component{
  constructor(props){
@@ -9,30 +10,41 @@ class App extends React.Component{
     nameLocation:'',
     showResult : false ,
     errorMessage:false ,
-
+    weatherResult:false ,
+    weatherInfo:{},
    }
  }
 
   getexplorer= async(ev) =>{
     ev.preventDefault();
     let urlForSearch= `https://eu1.locationiq.com/v1/search.php?key=pk.091d59a25243d149bb748755251ac17c&q=${this.state.searchUrl}&format=json`;
-    
+
+      let serverWeather= process.env.REACT_APP_SERVER;
+
+      let weatherUrl=`${serverWeather}/weather?cityname=${this.state.searchUrl}`
    try {
 
      let result = await axios.get(urlForSearch);
-     // console.log(result.data[0]);
+     let weatherData = await axios.get(weatherUrl)
+     console.log(result.data[0]);
      
      this.setState({
        nameLocation : result.data[0],
        showResult : true,
+       weatherResult:true ,
+       weatherInfo:weatherData.data,
+
        
       })
+      console.log(this.state.nameLocation);
+      console.log(this.state.weatherInfo);
     } 
-    
     catch {
       this.setState({
         showResult:false,
-        errorMessage:true
+        errorMessage:true,
+        weatherResult:false ,
+
       })
     }
   }
@@ -49,7 +61,7 @@ class App extends React.Component{
     return(
       <>
       <h1> City Explorer</h1>
-
+      
       <form onSubmit={this.getexplorer}>
         <input type='text' placeholder='type a city' onChange= {this.changeSearchUrl}/>
          <input type='submit' value='Explore'/>
@@ -75,6 +87,12 @@ class App extends React.Component{
         <p>  "error": "Unable to geocode" </p>
       } 
       </div>
+      {
+      this.state.weatherResult && 
+         <Weather nameOfCity={this.state.searchUrl}
+          weatherInfo={this.state.weatherInfo} />
+        
+      }
       </>
     )
   }
