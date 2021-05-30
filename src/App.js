@@ -115,32 +115,20 @@ class App extends React.Component {
                 <th>Day :</th>
                 <th>Date</th>
                 <th>Description</th>
-                {/* <th>Username</th> */}
               </tr>
             </thead>
 
-            {/* {this.state.responseFromBackend.map((item) => {
-          
-          return (
-            <> */}
-
+       
 
             <tbody>
               <tr>
                 <th>{this.state.daysCounter++}</th>
                 <td>{this.state.responseFromBackend.date}</td>
                 <td>{this.state.responseFromBackend.descreption}</td>
-                {/* <td>@mdo</td> */}
+                
               </tr>
 
             </tbody>
-
-            {/* </>
-          )
-        })
-
-        }
-        } */}
           </Table>
         }
 
@@ -170,10 +158,6 @@ class App extends React.Component {
         })}
       </CardColumns>
 
-        
-        {/* <button onClick={this.sendingRequest}>Submit Request</button>
-        <p>{this.state.responseData.display_name}</p> */}
-
         {this.state.errorMessage && <p>please write a valid city name</p>}
       </>
     )
@@ -189,5 +173,3 @@ class App extends React.Component {
 
 export default App;
 
-// hello from lab08 branch
-// test pull reaquest
