@@ -1,50 +1,81 @@
-# City Explorer
+# city-explorer
 
-**Author**: Maryam Najjar
+**Author**: Ahmad Abu Osbeh
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
 ## Getting Started
- first: should make a new reposotry in github, then creat a react app, Connect your GitHub repo to your local repo using the directions on GitHub. 
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
 ## Architecture
-1. github 2. react 3. locationiq 3. axios 
+<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
 ## Change Log
-23/05/2021 7:39 i creat a github repo and then i connect it with the react.
-8:00 have a deployed link https://city-explorer-maryam.netlify.app/
-8:30 install axios
-10:12 pm i have a form that allow users to write a location name 
-and i have a functions that take the name and search about it in my locationiq url and then render the name ,latitude, and longitude for the user location.
-10:58 pm i have reder a dinamic map.
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-
+01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 ## Credit and Collaborations
-https://locationiq.com/docs
-https://reactjs.org/docs/create-a-new-react-app.html
-https://github.com/
+<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-Name of feature: 
+## feture 1
 
+Name of feature: _Set up your React repository & API keys._
 
-Estimate of time needed to complete: 3 hours with do review
+Estimate of time needed to complete: _30 mins_
 
-Start time: 7:30
+Start time: _10:18 PM_
 
-Finish time: 12
+Finish time: _11:18 PM_
 
-Actual time needed to complete: 4 hours
+Actual time needed to complete: _1 HOUR_
 
-lab 07
+## feture 2
 
-Name of feature: 
-frontend
+Name of feature: _Locations._
 
-Estimate of time needed to complete: 2 hours
+Estimate of time needed to complete: _1 HOUR_
 
-Start time: 5 pm
+Start time: _9:20 PM_
 
-Finish time: 9 pm
+Finish time: _10:20 PM_
 
-Actual time needed to complete: 4 hours
+Actual time needed to complete: _1 HOUR_
+
+## feture 3
+
+Name of feature: _Map._
+
+Estimate of time needed to complete: _30 mins_
+
+Start time: _4:00 PM_
+
+Finish time: _4:30 PM_
+
+Actual time needed to complete: _30 mins_
+
+## feture 4
+
+Name of feature: _Errors._
+
+Estimate of time needed to complete: _15 mins_
+
+Start time: _4:30 PM_
+
+Finish time: _4:45 PM_
+
+Actual time needed to complete: _15 mins_
+
+## lab 08
+
+Name of feature: req from frontend to backend 
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 10:00 pm
+
+Finish time: 12:00 am
+
+Actual time needed to complete: 2 hours
