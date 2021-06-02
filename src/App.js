@@ -17,7 +17,7 @@ class App extends React.Component{
 
   getexplorer= async(ev) =>{
     ev.preventDefault();
-    let urlForSearch= `https://eu1.locationiq.com/v1/search.php?key=pk.091d59a25243d149bb748755251ac17c&q=${this.state.searchUrl}&format=json`;
+    let urlForSearch= `https://eu1.locationiq.com/v1/search.php?key=pk.8917af52731848f6b221fa3294f98d21&q=${this.state.searchUrl}&format=json`;
 
       let serverWeather= process.env.REACT_APP_SERVER;
 
@@ -81,7 +81,7 @@ class App extends React.Component{
         </p>}
         {this.state.showResult
          &&
-        <img src ={`https://maps.locationiq.com/v3/staticmap?key=pk.091d59a25243d149bb748755251ac17c&center=${this.state.nameLocation.lat},${this.state.nameLocation.lon}&zoom=1-18`}/>
+        <img src ={`https://maps.locationiq.com/v3/staticmap?key=pk.8917af52731848f6b221fa3294f98d21&center=${this.state.nameLocation.lat},${this.state.nameLocation.lon}&zoom=1-18`}/>
       }
           {this.state.errorMessage &&
         <p>  "error": "Unable to geocode" </p>
